@@ -30,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
 body {
     max-width: 1920px;
 	line-height: 1;
+    padding: 32px 0;
 }
 ol, ul {
 	list-style: none;
@@ -152,6 +153,11 @@ a{
     color: #7C7C7C;
     font-size: 16px;
     text-decoration: none;
+    transition: 1s;
+}
+a:hover{
+    color: white;
+    transition: .3s;
 }
 
 button{
@@ -161,6 +167,12 @@ button{
     border-radius: 15px;
     padding: 25px 51px;
     font-size: 20px;
+    transition: 1s;
+}
+button:hover{
+    background: white;
+    color: black;
+    transition: .3s;
 }
 
 section{
@@ -204,6 +216,10 @@ input{
     padding-bottom: 16px;
     padding-left: 16px;
     color: white;
+}
+input:focus{
+    outline: none;
+    border: 1px #F0FF00 solid;
 }
 input::placeholder {
     color: #8F8F8F;
