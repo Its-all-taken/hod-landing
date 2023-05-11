@@ -28,10 +28,20 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-    max-width: 1920px;
+    max-width: 96%;
+    margin: 0 auto;
 	line-height: 1;
-    padding: 32px 0;
+    background-image: none 0;
+    /* background-position: bottom; */
+    transition: opacity 500ms;
 }
+.lights{
+    transition: opacity 500ms;
+    background-image: url(../images/northenlights.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
 ol, ul {
 	list-style: none;
 }
@@ -190,6 +200,7 @@ section:first-of-type img{
 .description {
     align-self: flex-end;
     max-width: 30%;
+    min-width: 350px;
     margin-bottom: 32px;
 }
 .splash{
@@ -238,3 +249,4 @@ input::placeholder {
     bottom: 16px;
     left: 16px;
 }
+
