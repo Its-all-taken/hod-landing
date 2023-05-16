@@ -111,7 +111,8 @@ section {
     position: relative;
 }
 body {
-  max-width: 96%;
+  max-width: 1080px;
+  /* max-width: 96%; */
   margin: 0 auto;
   line-height: 1;
   background-image: none 0;
@@ -176,7 +177,7 @@ footer div {
 }
 header,
 footer {
-  padding: 0 32px;
+  /* padding: 0 32px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -249,7 +250,7 @@ section:first-of-type p {
 .connect-text {
   margin: 0 auto;
   align-items: center;
-  width: 406px;
+  max-width: 406px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -283,6 +284,7 @@ button {
   font-size: 20px;
   transition: 1s;
   cursor: pointer;
+  color: black !important;
 }
 button:hover {
   background: white;
@@ -353,4 +355,7 @@ input::placeholder {
   color: #8f8f8f;
   bottom: 16px;
   left: 16px;
+}
+form{
+  width: 100%;
 }
