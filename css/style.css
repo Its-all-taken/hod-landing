@@ -111,8 +111,8 @@ section {
     position: relative;
 }
 body {
-  max-width: 1080px;
-  /* max-width: 96%; */
+  /* max-width: 1080px; */
+  max-width: 96%;
   margin: 0 auto;
   line-height: 1;
   background-image: none 0;

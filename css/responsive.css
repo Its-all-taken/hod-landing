@@ -1,112 +1,122 @@
-.mobile-phones{
-    display: none;
+.mobile-phones {
+  display: none;
 }
-@media(max-width: 1260px){
-    .d-only{
-        display: none;
-    }
-    section:first-of-type img{
-        margin: 0;
-    }
-    .mobile-phones{
-        width: auto;
-        display: block;
-    }
-    /* .connect{
+@media (min-width: 1441px) {
+  body {
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+  .animated_lights {
+    max-width: 101.25vw;
+  }
+}
+@media (max-width: 1260px) {
+  .d-only {
+    display: none;
+  }
+  section:first-of-type img {
+    margin: 0;
+  }
+  .mobile-phones {
+    width: auto;
+    display: block;
+  }
+  /* .connect{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     } */
-    .connect-text{
-        padding: 0;
-    }
-    .connect img{
-        margin-top: 28px;
-        position: relative;
-    }
+  .connect-text {
+    padding: 0;
+  }
+  .connect img {
+    margin-top: 28px;
+    position: relative;
+  }
 }
-@media(max-width: 768px){
-    /* .inputer{
+@media (max-width: 768px) {
+  /* .inputer{
         /* width: 100%; */
-    /* } */
-    .connect input{
-        width: calc(100% - 18px);
-    }
-    .connect button{
-        padding: 25px 0;
-        width: 100%;
-    }
-    button{
-        font-size: 16px;
-        line-height: 19px;
-        padding: 12px 20px;
-        flex-shrink: 0;
-    }
-    .splash img{
-        width: auto;
-        margin-left: -90%;
-        min-height: 376px;
-    }
-    header, footer{
-        padding: 16px 8px;
-    }
-    section{
-        padding: 50px 23px 0 23px;
-    }
-    .description{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    section:first-of-type{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .description p{
-        text-align: center;
-    }
-    h1{
-        font-size: 40px;
-    }
-    h3{
-        font-size: 24px;
-        line-height: 29px;
-    }
-    .feature{
-        display: block;
-    }
-    .feature h3{
-        margin-top: -30px;
-        margin-left: 80px;
-    }
-    #i1{
-        height: 200px;
-        margin-left: 180px;
-    }
-    #i2{
-        margin-left: -48px;
-        height: 78px;
-        transform: rotate(24.35deg);
-    }
-    #i3{
-        height: 222px;
-        margin-left: 180px;
-    }
-    .connect-text{
-        margin: auto;
-    }
-    .connect-text h3 {
-        max-width: 340px;
-        white-space: normal;
-        text-align: center;
-    }
-    .mobile-phones:last-of-type{
-        margin-left: 30px;
-    }
-    footer div{
-        flex-direction: column;
-    }
+  /* } */
+  .connect input {
+    width: calc(100% - 18px);
+  }
+  .connect button {
+    padding: 25px 0;
+    width: 100%;
+  }
+  button {
+    font-size: 16px;
+    line-height: 19px;
+    padding: 12px 20px;
+    flex-shrink: 0;
+  }
+  .splash img {
+    width: auto;
+    margin-left: -90%;
+    min-height: 376px;
+  }
+  header,
+  footer {
+    padding: 16px 8px;
+  }
+  section {
+    padding: 50px 23px 0 23px;
+  }
+  .description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  section:first-of-type {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .description p {
+    text-align: center;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  h3 {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .feature {
+    display: block;
+  }
+  .feature h3 {
+    margin-top: -30px;
+    margin-left: 80px;
+  }
+  #i1 {
+    height: 200px;
+    margin-left: 180px;
+  }
+  #i2 {
+    margin-left: -48px;
+    height: 78px;
+    transform: rotate(24.35deg);
+  }
+  #i3 {
+    height: 222px;
+    margin-left: 180px;
+  }
+  .connect-text {
+    margin: auto;
+  }
+  .connect-text h3 {
+    max-width: 340px;
+    white-space: normal;
+    text-align: center;
+  }
+  .mobile-phones:last-of-type {
+    margin-left: 30px;
+  }
+  footer div {
+    flex-direction: column;
+  }
 }
