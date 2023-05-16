@@ -2,251 +2,355 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+* {
+  z-index: 100;
+}
+section {
+    position: relative;
 }
 body {
-    max-width: 96%;
-    margin: 0 auto;
-	line-height: 1;
-    background-image: none 0;
-    /* background-position: bottom; */
-    transition: opacity 500ms;
+  max-width: 96%;
+  margin: 0 auto;
+  line-height: 1;
+  background-image: none 0;
+  overflow: auto;
+  transition: opacity 500ms;
 }
-.lights{
-    transition: opacity 500ms;
-    background-image: url(../images/northenlights.png);
-    background-repeat: no-repeat;
-    background-position: bottom;
+.animated_lights {
+  z-index: 1;
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: -2.3%;
+  right: -2%;
+  background-size: 100% auto;
+  background-image: url(../images/northenlights.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  max-width: 100vw;
+}
+body {
+  position: relative;
+  background-color: black;
+  background-image: none;
+  background-position: bottom;
+  transition: all 0.5s ease;
 }
 
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 @font-face {
-    font-family: 'PP Neue Montreal';
-    src: url(../fonts/neue_montreal.otf) format(opentype);
+  font-family: "PP Neue Montreal";
+  src: url(../fonts/neue_montreal.otf) format(opentype);
 }
 
-header{
-    margin-bottom: 20px;
+header {
+  margin-bottom: 20px;
 }
-footer{
-    height: 100px;
+footer {
+  height: 100px;
 }
-footer div{
-    display: flex;
-    gap: 16px;
+footer div {
+  display: flex;
+  gap: 16px;
 }
-header, footer{
-    padding: 0 32px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-body {
-    background-color: black;
+header,
+footer {
+  padding: 0 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-h1, h2, h3, p, a{
-    font-family: PP Neue Montreal;
-    color: white;
+h1,
+h2,
+h3,
+p,
+a {
+  font-family: PP Neue Montreal;
+  color: white;
 }
-h1{
-    font-size: 120px;
+h1 {
+  font-size: 120px;
 }
-h2{
-    font-size: 24px;
-    line-height: 29px;
+h2 {
+  font-size: 24px;
+  line-height: 29px;
 }
-h3{
-    font-size: 48px;
-    line-height: 58px;
+h3 {
+  font-size: 48px;
+  line-height: 58px;
 }
-section:first-of-type p{
-    color: black;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    margin-bottom: 16px;
+section:first-of-type p {
+  color: black;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 16px;
 }
-.feature{
-    display: flex;
+.feature {
+  display: flex;
 }
-.feature:nth-of-type(2){
-    margin: 48px 0;
+.feature:nth-of-type(2) {
+  margin: 48px 0;
 }
-.feature h3{
-    max-width: 70%;
-    margin-left: 54px;
+.feature h3 {
+  max-width: 70%;
+  margin-left: 54px;
 }
-#i1{
-    margin-left: -20px;
+#i1 {
+  margin-left: -20px;
 }
-#i3{
-    margin-top: 18px;
-    margin-left: -100px;
+#i3 {
+  margin-top: 18px;
+  margin-left: -100px;
 }
-.connect{
-    position: relative;
+.connect {
+  position: relative;
 }
-.connect button{
-    padding: 25px 136px;
-    margin-top: 16px;
+.connect button {
+  padding: 25px 136px;
+  margin-top: 16px;
 }
-.connect img{
-    position: absolute;
-    bottom: 0;
+.connect img {
+  position: absolute;
+  bottom: 0;
 }
-.connect img:first-of-type{
-    left: -28px;
+.connect img:first-of-type {
+  left: -28px;
 }
-.connect img:last-of-type{
-    right: 0;
+.connect img:last-of-type {
+  right: 0;
 }
-.connect-text h3{
-    white-space: nowrap; 
-    margin-bottom: 42px;
+.connect-text h3 {
+  white-space: nowrap;
+  margin-bottom: 42px;
 }
-.connect-text{
-    margin: 0 auto;
-    align-items: center;
-    width: 406px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 120px;
+.connect-text {
+  margin: 0 auto;
+  align-items: center;
+  width: 406px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 120px;
 }
-.ct-text{
-    width: 80%;
-    font-size: 20px;
-    line-height: 24px;
-    text-align: center;
-    color: #A4A4AC;
-    margin-bottom: 24px;
+.ct-text {
+  width: 80%;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #a4a4ac;
+  margin-bottom: 24px;
 }
-a{
-    color: #7C7C7C;
-    font-size: 16px;
-    text-decoration: none;
-    transition: 1s;
+a {
+  color: #7c7c7c;
+  font-size: 16px;
+  text-decoration: none;
+  transition: 1s;
 }
-a:hover{
-    color: white;
-    transition: .3s;
-}
-
-button{
-    background: #F0FF00;
-    box-shadow: 2px 2px 8px rgba(240, 255, 0, 0.15);
-    border: none;
-    border-radius: 15px;
-    padding: 25px 51px;
-    font-size: 20px;
-    transition: 1s;
-}
-button:hover{
-    background: white;
-    color: black;
-    transition: .3s;
+a:hover {
+  color: white;
+  transition: 0.3s;
 }
 
-section{
-    overflow: hidden;
-    border-radius: 30px;
-    padding: 28px 0 0 28px;
+button {
+  background: #f0ff00;
+  box-shadow: 2px 2px 8px rgba(240, 255, 0, 0.15);
+  border: none;
+  border-radius: 15px;
+  padding: 25px 51px;
+  font-size: 20px;
+  transition: 1s;
+  cursor: pointer;
 }
-section:first-of-type{
-    background: #EDF2DC;
-    display: flex;
+button:hover {
+  background: white;
+  color: black;
+  transition: 0.3s;
 }
-section:first-of-type img{
-    margin-left: auto;
+
+section {
+  overflow: hidden;
+  border-radius: 30px;
+  padding: 28px 0 0 28px;
+}
+section:first-of-type {
+  background: #edf2dc;
+  display: flex;
+}
+section:first-of-type img {
+  margin-left: auto;
 }
 .description {
-    align-self: flex-end;
-    max-width: 30%;
-    min-width: 350px;
-    margin-bottom: 32px;
+  align-self: flex-end;
+  max-width: 30%;
+  min-width: 350px;
+  margin-bottom: 32px;
 }
-.splash{
-    padding: 0;
-    margin: 8px 0px;
+.splash {
+  padding: 0;
+  margin: 8px 0px;
 }
-.splash img{
-    width: 100%;
+.splash img {
+  width: 100%;
 }
-section:last-of-type{
-    background: #1C1C1C;
+section:last-of-type {
+  background: #1c1c1c;
 }
 
-.inputer{
-    position: relative;
+.inputer {
+  position: relative;
 }
-input{
-    background: #262626;
-    border: 1px solid #373737;
-    border-radius: 12px;
-    width: 406px;
-    height: 57px;
-    font-size: 18px;
-    padding-bottom: 16px;
-    padding-left: 16px;
-    color: white;
+input {
+  background: #262626;
+  border: 1px solid #373737;
+  border-radius: 12px;
+  width: 406px;
+  height: 57px;
+  font-size: 18px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  color: white;
 }
-input:focus{
-    outline: none;
-    border: 1px #F0FF00 solid;
+input:focus {
+  outline: none;
+  border: 1px #f0ff00 solid;
 }
 input::placeholder {
-    color: #8F8F8F;
-    font-family: 'PP Neue Montreal';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 22px;
+  color: #8f8f8f;
+  font-family: "PP Neue Montreal";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
 }
-.i-label{
-    margin: 0;
-    position: absolute;
-    font-size: 11px;
-    line-height: 13px;
-    color: #8F8F8F;
-    bottom: 16px;
-    left: 16px;
+.i-label {
+  margin: 0;
+  position: absolute;
+  font-size: 11px;
+  line-height: 13px;
+  color: #8f8f8f;
+  bottom: 16px;
+  left: 16px;
 }
-
